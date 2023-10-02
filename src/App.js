@@ -109,7 +109,8 @@ function App() {
                 setSearch({ type: input.type, keyword: input.keyword });
                 console.log(search);
               }}
-              className="p-2 w-full border-2 border-slate-300 rounded-2xl bg-black text-white ">
+              className="p-2 w-full border-2 border-slate-300 rounded-2xl bg-black text-white "
+            >
               Search
             </button>
           </div>
@@ -124,7 +125,8 @@ function App() {
                   e.preventDefault();
                   setOpen({ open: !open, index: i });
                 }}
-                className="flex-1 flex justify-center px-4 py-4">
+                className="flex-1 flex justify-center px-4 py-4"
+              >
                 <Article
                   type={cap.type}
                   last_update={cap.last_update}
@@ -143,7 +145,8 @@ function App() {
                 ? 'bg-slate-300 max-w-[110px] p-2 w-full text-black  rounded-2xl'
                 : 'bg-gray-400 max-w-[110px] p-2 w-full text-white  rounded-2xl'
             }
-            onClick={() => page >= 1 && setPage(page - 1)}>
+            onClick={() => page >= 1 && setPage(page - 1)}
+          >
             &lt;&lt;Prev
           </button>
           <button
@@ -152,7 +155,8 @@ function App() {
                 ? 'bg-slate-300 max-w-[110px] p-2 w-full text-black rounded-2xl '
                 : 'bg-gray-400 max-w-[110px] p-2 w-full text-white rounded-2xl '
             }
-            onClick={() => page < maxPage - 1 && setPage(page + 1)}>
+            onClick={() => page < maxPage - 1 && setPage(page + 1)}
+          >
             Next&gt;&gt;
           </button>
         </section>
@@ -177,7 +181,8 @@ export function Popup({ open, cap, setOpen }) {
           open.open
             ? 'fixed top-0 bottom-0 left-0 right-0 bg-slate-300 opacity-50 invisible'
             : 'fixed top-0 bottom-0 left-0 right-0 bg-slate-800 visible'
-        }>
+        }
+      >
         <div className="shadow-lg w-[300px] bg-white text-black p-4 m-auto my-4">
           <div className="float-right" onClick={() => setOpen({ ...open, open: !open.open })}>
             X
