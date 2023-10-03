@@ -36,7 +36,6 @@ function App() {
         'X-Authorization': 'Bearer ' + process.env.REACT_APP_TOKEN
       }
     };
-    // eslint-disable-next-line no-undef
     fetch(process.env.REACT_APP_BASE_URL + '/Capsule/', myInit)
       .then((res) => res.json())
       .then((res) => {
@@ -65,12 +64,12 @@ function App() {
             />
           </video>
           <div className="flex-1 laptop:w-1/2 absolute p-2 py-8 text-white laptop:p-8">
-            <h1 className="laptop:text-4xl laptop:p-2 laptop:pb-4">
+            <h1 className="laptop:text-4xl px-2 pb-2  laptop:pb-4">
               DRAGON
               <br />
               SENDING HUMANS AND CARGO INTO SPACE
             </h1>
-            <p className="laptop:text-2xl laptop:p-2">
+            <p className="laptop:text-2xl p-2">
               The Dragon spacecraft is capable of carrying up to 7 passengers to and from Earth
               orbit, and beyond.
             </p>
@@ -109,8 +108,7 @@ function App() {
                 setSearch({ type: input.type, keyword: input.keyword });
                 console.log(search);
               }}
-              className="p-2 w-full border-2 border-slate-300 rounded-2xl bg-black text-white "
-            >
+              className="p-2 w-full border-2 border-slate-300 rounded-2xl bg-black text-white ">
               Search
             </button>
           </div>
@@ -125,8 +123,7 @@ function App() {
                   e.preventDefault();
                   setOpen({ open: !open, index: i });
                 }}
-                className="flex-1 flex justify-center px-4 py-4"
-              >
+                className="flex-1 flex justify-center px-4 py-4">
                 <Article
                   type={cap.type}
                   last_update={cap.last_update}
@@ -145,8 +142,7 @@ function App() {
                 ? 'bg-slate-300 max-w-[110px] p-2 w-full text-black  rounded-2xl'
                 : 'bg-gray-400 max-w-[110px] p-2 w-full text-white  rounded-2xl'
             }
-            onClick={() => page >= 1 && setPage(page - 1)}
-          >
+            onClick={() => page >= 1 && setPage(page - 1)}>
             &lt;&lt;Prev
           </button>
           <button
@@ -155,8 +151,7 @@ function App() {
                 ? 'bg-slate-300 max-w-[110px] p-2 w-full text-black rounded-2xl '
                 : 'bg-gray-400 max-w-[110px] p-2 w-full text-white rounded-2xl '
             }
-            onClick={() => page < maxPage - 1 && setPage(page + 1)}
-          >
+            onClick={() => page < maxPage - 1 && setPage(page + 1)}>
             Next&gt;&gt;
           </button>
         </section>
@@ -181,8 +176,7 @@ export function Popup({ open, cap, setOpen }) {
           open.open
             ? 'fixed top-0 bottom-0 left-0 right-0 bg-slate-300 opacity-50 invisible'
             : 'fixed top-0 bottom-0 left-0 right-0 bg-slate-800 visible'
-        }
-      >
+        }>
         <div className="shadow-lg w-[300px] bg-white text-black p-4 m-auto my-4">
           <div className="float-right" onClick={() => setOpen({ ...open, open: !open.open })}>
             X
