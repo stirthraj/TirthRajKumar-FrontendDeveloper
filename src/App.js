@@ -115,7 +115,7 @@ function App() {
         </div>
 
         <section className="flex flex-wrap">
-          {pages.length &&
+          {pages.length ? (
             pages.map((cap, i) => (
               <div
                 key={i}
@@ -132,7 +132,10 @@ function App() {
                   reuse_count={cap.reuse_count}
                 />
               </div>
-            ))}
+            ))
+          ) : (
+            <div>Loading...</div>
+          )}
         </section>
 
         <section className="flex justify-between px-4 gap-4">
